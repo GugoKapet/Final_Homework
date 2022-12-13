@@ -16,3 +16,17 @@ for (int i = 0; i < array.Length; i++)
     array[i] = Console.ReadLine();
 }
 }
+
+string[] CreateArrayWithMaximumThreeSymbols(string[] arrayy)
+{
+    string[] shortenedArray = new string[arrayy.Length];
+    for (int i = 0; i < arrayy.Length; i++)
+    {
+        if (arrayy[i].Length <= 3)
+        {
+            shortenedArray[i] = arrayy[i];
+        }
+    }
+    return shortenedArray;
+}
+

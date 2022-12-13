@@ -6,15 +6,18 @@ if (!isParsedStringsNumber)
     return;
 }
 string[] stringArray = new string[stringsNumber];
-
 FillStringArray(stringArray);
+string[] shortenedArray = CreateArrayWithMaximumThreeSymbols(stringArray);
+Console.WriteLine("Элементы массива строк, отвечающие требованиям:");
+PrintShortenedArray(shortenedArray);
+
 void FillStringArray(string[] array)
 {
-for (int i = 0; i < array.Length; i++)
-{
-    Console.WriteLine($"Введите символы строки {i+1}");
-    array[i] = Console.ReadLine();
-}
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine($"Введите символы строки {i + 1}");
+        array[i] = Console.ReadLine();
+    }
 }
 
 string[] CreateArrayWithMaximumThreeSymbols(string[] arrayy)
@@ -30,3 +33,10 @@ string[] CreateArrayWithMaximumThreeSymbols(string[] arrayy)
     return shortenedArray;
 }
 
+void PrintShortenedArray(string[] arrayyy)
+{
+    for (int i = 0; i < arrayyy.Length; i++)
+    {
+        Console.WriteLine($"{arrayyy[i]} ");
+    }
+}

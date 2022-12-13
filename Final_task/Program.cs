@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Введите количество строк в масcиве");
+bool isParsedStringsNumber = int.TryParse(Console.ReadLine(), out int stringsNumber);
+if (!isParsedStringsNumber)
+{
+    Console.WriteLine("Неверно введены данные!");
+    return;
+}
+string[] stringArray = new string[stringsNumber];
